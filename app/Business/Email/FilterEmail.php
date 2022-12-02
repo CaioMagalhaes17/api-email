@@ -30,7 +30,7 @@ class FilterEmail {
                 $i++;
             }
         }
-        return DB::select('select * from ' . $this->table . '' .$query);
+        return DB::select('select * from ' . $this->table . '' .$query . 'order by id DESC');
     }
 
     private function getFields($filtros){
